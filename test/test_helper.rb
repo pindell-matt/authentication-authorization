@@ -8,4 +8,8 @@ end
 
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
+
+  def teardown
+    reset_session!
+  end
 end
